@@ -37,7 +37,9 @@ def tfidf(hpo_incidence):
     store the results in the tfidf_src dictionary in the form of
     {phenotype: {disease: tf-idf score of the phenotype in this disease}}
     """
-    tfidf_src[hpo_incidence] = {}
+    global tfidf_src
+    tfidf_src = {hpo_incidence: {}}
+
     hpo_appr = 0
     for ind, ro in df.iterrows():
         if ro['HPO Term'] == hpo_incidence:
@@ -61,6 +63,7 @@ def tfidf_list(all_hpo):
     {disease: total tfidf score of the disease based on all given phenotype}
     """
     global tfidf_result
+    tfidf_result = {}
     for hpo_incidence in all_hpo:
         tfidf(hpo_incidence)
         for disorder in tfidf_src[hpo_incidence]:
