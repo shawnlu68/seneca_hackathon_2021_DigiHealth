@@ -11,3 +11,8 @@ When selection is done, press "Confirm Phenotypes", it might take a while since 
 but eventually it gives you a list of possible diseases, in descending order with possibility.
 
 The possibility is calculated with a method similar to the tf-idf method.
+
+
+## vectorization update
+
+optimi
