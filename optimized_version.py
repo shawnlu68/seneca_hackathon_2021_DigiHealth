@@ -7,9 +7,6 @@ import datetime
 
 begin_time = datetime.datetime.now()
 
-
-
-
 df = pd.read_csv('disorder_data_phenotypes.csv')
 
 disorder_list = pd.unique(df['Disorder Name']).tolist()
